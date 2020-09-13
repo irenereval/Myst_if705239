@@ -8,17 +8,7 @@
 # -- repository: YOUR REPOSITORY URL                                                                     -- #
 # -- --------------------------------------------------------------------------------------------------- -- #
 """
-"""
-# -- --------------------------------------------------------------------------------------------------- -- #
-# -- project:¿Qué estrategia de inversión propondrías si tu trabajo fuera administrar 1 Millón de pesos? -- #
-# -- script: data.py : python script for data collection                                                 -- #
-# -- author: Irenereval                                                                                  -- #
-# -- license: GPL-3.0 License                                                                            -- #
-# -- repository:https://github.com/irenereval/Myst_if705239                                            -- #
-# -- --------------------------------------------------------------------------------------------------- -- #
-"""
-##############
-#-----------librerias python----------
+# -- ------------------------------------------------------------------------------------------Librerias -- #
 import data as datamain
 import functions as functionmain
 # -- -------------------------------------------------------------------------------------------paso 1.1 -- #
@@ -34,13 +24,13 @@ print(fechasmain['t_fechas'][0:5])
 #Construir el vector de formas apartir del vector nombre de archivos
 # -- -------------------------------------------------------------------------------------------paso 1.4 -- #
 #Construir el vector de tickets utilizando yahoo finance
-# -- -------------------------------------------------------------------------------------------paso 1.5 -- #
 global_tickers_main = functionmain.funcion_tickers(archivos=archivosmain,data_archivos=data_archivos_main)
 print(global_tickers_main[0:5])
-
+# -- -------------------------------------------------------------------------------------------paso 1.5 -- #
 #Descargar y acomodar todos los datos
-# -- -------------------------------------------------------------------------------------------paso 1.6 -- #
 total_preciosmain = functionmain.funcio_descargar(global_tickers= global_tickers_main,fechas= fechasmain)
+
+# -- -------------------------------------------------------------------------------------------paso 1.6 -- #
 #Obtener posiciones historicas
 # -- -------------------------------------------------------------------------------------------paso 1.7 -- #
 
