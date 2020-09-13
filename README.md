@@ -15,7 +15,7 @@ Or you can manually install one by one using the name and version in the file.
 *Add here examples of core functionalities for the project in this repository.*
 
 ## Author
-*Add Name and a brief description on who you are.*
+Irene Reyes Valdez 
 
 ## License
 **GNU General Public License v3.0** 
