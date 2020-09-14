@@ -1,16 +1,16 @@
-
-"""
 # -- --------------------------------------------------------------------------------------------------- -- #
-# -- project: A SHORT DESCRIPTION OF THE PROJECT                                                         -- #
-# -- script: main.py : python script with the main functionality                                         -- #
-# -- author: YOUR GITHUB USER NAME                                                                       -- #
+# -- project:¿Qué estrategia de inversión propondrías si tu trabajo fuera administrar 1 Millón de pesos? -- #
+# -- script: data.py : python script for data collection                                                 -- #
+# -- author: Irenereval                                                                                  -- #
 # -- license: GPL-3.0 License                                                                            -- #
-# -- repository: YOUR REPOSITORY URL                                                                     -- #
+# -- repository:https://github.com/irenereval/Myst_if705239                                              -- #
 # -- --------------------------------------------------------------------------------------------------- -- #
-"""
+
 # -- ------------------------------------------------------------------------------------------Librerias -- #
 import data as datamain
 import functions as functionmain
+import pandas as pd
+import numpy as np
 # -- -------------------------------------------------------------------------------------------paso 1.1 -- #
 #-- Lista de archivos a leer
 archivosmain = datamain.archivos
@@ -31,7 +31,8 @@ print(global_tickers_main[0:5])
 total_preciosmain = functionmain.funcio_descargar(global_tickers= global_tickers_main,fechas= fechasmain)
 
 # -- -------------------------------------------------------------------------------------------paso 1.6 -- #
-#Obtener posiciones historicas
+#Iniciar con Pasiva
+
 # -- -------------------------------------------------------------------------------------------paso 1.7 -- #
 
 # -- -------------------------------------------------------------------------------------------paso 1.8 -- #

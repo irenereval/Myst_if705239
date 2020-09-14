@@ -55,9 +55,9 @@ def funcion_tickers(archivos,data_archivos):
 #Descargar y acomodar todos los datos
 def funcio_descargar(global_tickers,fechas):
     inicio = time.time()
-    data_yf = yf.download(global_tickers, start='2017-08-21', end='2020-08-22', actions=False,
+    data_yf = yf.download(global_tickers, start='2018-01-30', end='2020-08-24', actions=False,
                           group_by='close', interval='1d', auto_adjust=False, prepost=False, threads=True)
-    print('se tardo', time.time() - inicio, 'segundos')
+    print('se tardo', round(time.time() - inicio,2), 'segundos')
 
     # Convertir columnas de fechas
     data_close = pd.DataFrame({i: data_yf[i]['Close'] for i in global_tickers})
@@ -70,11 +70,20 @@ def funcio_descargar(global_tickers,fechas):
     # Ordenar columnas lexicograficamente
     total_precios = total_precios.reindex(sorted(total_precios.columns), axis=1)
     #print para debuguear esta corriendo hasta el final de la funcion
-    print("hola")
     return total_precios
 
 # -- -------------------------------------------------------------------------------------------paso 1.6 -- #
-#Obtener posiciones historicas
+#Inversion pasiv
+k = 1000000 #Capital inicial
+c = 0.00125 #Comisiones
+
+#Vector de comiciones
+comisiones = [0]
+
+#Posiciiones iniciales
+c_activos = ['KOFL', 'KOFUBL', 'BSMX', 'MX', 'USD']
+inversion_pasiva = {'timestamp':['30-01-2018'],'capital':[k]} #Diccionario de resultados finales
+
 # -- -------------------------------------------------------------------------------------------paso 1.7 -- #
 
 # -- -------------------------------------------------------------------------------------------paso 1.8 -- #
